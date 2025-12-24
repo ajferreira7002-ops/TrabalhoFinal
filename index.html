@@ -1645,29 +1645,7 @@
             });
         });
 
-        // Lightbox para fotos CAM
-        const photoItems = document.querySelectorAll('.photo-item');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxClose = document.getElementById('lightboxClose');
-
-        photoItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const photoSrc = item.getAttribute('data-photo');
-                lightboxImg.src = photoSrc;
-                lightbox.classList.add('active');
-            });
-        });
-
-        lightboxClose.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-        });
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-            }
-        });
+        // Lightbox removido para fotos CAM conforme solicitado
 
         // Mapa de Viagens - Inicializar quando o modal abre
         const initTravelMap = () => {
